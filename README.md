@@ -20,20 +20,20 @@ DSHelper is a comprehensive toolkit designed to eliminate repetitive boilerplate
 ## 📦 Installation
 
 ```bash
-pip install dshelper
+pip install dshelper-ayushlokre
 ```
 
 For development installation:
 
 ```bash
-pip install dshelper[dev]
+pip install dshelper-ayushlokre[dev]
 ```
 
 ## 🚀 Quick Start
 
 ```python
 import pandas as pd
-from dshelper import missing, preprocessing, correlation, evaluation
+from dshelper_ayushlokre import missing, preprocessing, correlation, evaluation
 
 # Load your data
 df = pd.read_csv('your_data.csv')
@@ -68,7 +68,7 @@ metrics = evaluation.quick_eval(y_test, y_pred)
 Analyze missing values and generate a comprehensive report with visualization.
 
 ```python
-from dshelper import missing
+from dshelper_ayushlokre import missing
 
 # Get detailed missing value report
 report = missing.analyze(df, threshold=5.0, show_plot=True)
@@ -104,7 +104,7 @@ df_filled = missing.fill_missing(df, strategy='constant', fill_value=0)
 Generate beautiful correlation heatmaps.
 
 ```python
-from dshelper import correlation
+from dshelper_ayushlokre import correlation
 
 # Basic heatmap
 corr_matrix = correlation.heatmap(df)
@@ -143,7 +143,7 @@ print(f"Removed columns: {removed_cols}")
 Split data and apply scaling in one step.
 
 ```python
-from dshelper import preprocessing
+from dshelper_ayushlokre import preprocessing
 
 # Standard scaling (default)
 X_train, X_test, y_train, y_test = preprocessing.split_and_scale(
@@ -196,7 +196,7 @@ df_flagged = preprocessing.handle_outliers(df, action='flag')
 Comprehensive model evaluation in one line.
 
 ```python
-from dshelper import evaluation
+from dshelper_ayushlokre import evaluation
 
 # Auto-detect classification or regression
 metrics = evaluation.quick_eval(y_test, y_pred)
@@ -248,7 +248,7 @@ Here's a complete workflow using DSHelper:
 
 ```python
 import pandas as pd
-from dshelper import missing, correlation, preprocessing, evaluation
+from dshelper_ayushlokre import missing, correlation, preprocessing, evaluation
 from sklearn.ensemble import RandomForestClassifier
 
 # 1. Load and explore data
